@@ -62,3 +62,5 @@ crashlytics-build.properties
 Logs/
 Library/
 UserSettings/
+Temp/
+.vsconfig
