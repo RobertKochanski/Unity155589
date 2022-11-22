@@ -182,8 +182,10 @@ GameObject:
   - component: {fileID: 5400000}
   - component: {fileID: 13600000}
   - component: {fileID: 11400004}
+  - component: {fileID: 5200661841651776362}
+  - component: {fileID: 2920538602615963836}
   m_Layer: 0
-  m_Name: RigidBodyFPSController
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -249,9 +251,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2000000}
   movementSettings:
-    ForwardSpeed: 8
-    BackwardSpeed: 4
-    StrafeSpeed: 4
+    ForwardSpeed: 4
+    BackwardSpeed: 2
+    StrafeSpeed: 2
     RunMultiplier: 2
     RunKey: 304
     JumpForce: 50
@@ -301,9 +303,35 @@ MonoBehaviour:
   advancedSettings:
     groundCheckDistance: 0.1
     stickToGroundHelperDistance: 0.6
-    slowDownRate: 20
-    airControl: 1
+    slowDownRate: 1
+    airControl: 0
     shellOffset: 0
+--- !u!114 &5200661841651776362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804868b941fcc5545bd9fdd02af7eb10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
+--- !u!114 &2920538602615963836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042a36674962b76438994d57a3f9d6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 0}
 --- !u!1 &1364650573
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +565,7 @@ MonoBehaviour:
   camera: {fileID: 2000000}
   range: 100
   damage: 30
-  muzzleFlash: {fileID: 0}
+  muzzleFlash: {fileID: 8310521604177875296}
   hitEffect: {fileID: 4365823562459631609, guid: 63307a1c42fa74f49821442eb75998db, type: 3}
 --- !u!4 &1517500494966657971 stripped
 Transform:
@@ -551,9 +579,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7962646073647374390}
     m_Modifications:
+    - target: {fileID: 1693693203789717613, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1693693203789717613, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: m_MinParticleSize
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 2700670809392043397, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
       propertyPath: m_Name
       value: Muzzle Flash VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700670809392043397, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841829519729596852, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 11.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: LightsModule.ratio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: ShapeModule.arc.value
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193710055828786942, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5531216003463347160, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
       propertyPath: m_RootOrder
@@ -561,15 +645,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5531216003463347160, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 5531216003463347160, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 5531216003463347160, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5531216003463347160, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -604,5 +688,10 @@ PrefabInstance:
 --- !u!4 &671448400291212195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5531216003463347160, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
+  m_PrefabInstance: {fileID: 5013532665521885307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8310521604177875296 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3947196420876173595, guid: 191ab9d811e9cf94f849cc466bed83e9, type: 3}
   m_PrefabInstance: {fileID: 5013532665521885307}
   m_PrefabAsset: {fileID: 0}
