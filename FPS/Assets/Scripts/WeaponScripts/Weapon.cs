@@ -27,7 +27,7 @@ public class Weapon : MonoBehaviour
 
     public void OnEnable()
     {
-        StartCoroutine(ShootDelay(timeBetweenShots));
+        StartCoroutine(ShootDelay(1));
     }
 
     IEnumerator Shoot()

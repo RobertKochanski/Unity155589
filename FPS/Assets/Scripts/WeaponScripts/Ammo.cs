@@ -6,7 +6,12 @@ using UnityEngine;
 public class Ammo : MonoBehaviour
 {
     [SerializeField]
-    private AmmoSlot[] ammoSlots;
+    private List<AmmoSlot> ammoSlots = new List<AmmoSlot>()
+    {
+        new AmmoSlot(AmmoType.bullets, 30),
+        new AmmoSlot(AmmoType.shells, 15),
+        new AmmoSlot(AmmoType.sniperBullets, 10),
+    };
 
     [Serializable]
     public class AmmoSlot
@@ -14,6 +19,11 @@ public class Ammo : MonoBehaviour
         public AmmoType ammoType;
         public int ammoAmount;
 
+        public AmmoSlot(AmmoType ammoType, int ammoAmount)
+        {
+            this.ammoType = ammoType;
+            this.ammoAmount = ammoAmount;
+        }
     }
 
     public int GetCurrentAmmo(AmmoType ammoType)
