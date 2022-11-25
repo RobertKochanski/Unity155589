@@ -37,6 +37,14 @@ public class Ammo : MonoBehaviour
         var ammoSlot = GetAmmoType(ammoType);
         ammoSlot.ammoAmount--;
     }
+    
+    public int IncreaseCurrentAmmo(AmmoType ammoType, int ammoAmount)
+    {
+        var ammoSlot = GetAmmoType(ammoType);
+        ammoSlot.ammoAmount += ammoAmount;
+
+        return ammoSlot.ammoAmount;
+    }
 
     private AmmoSlot GetAmmoType(AmmoType ammoType)
     {

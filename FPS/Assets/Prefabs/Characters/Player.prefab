@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 11400004}
   - component: {fileID: 5200661841651776362}
   - component: {fileID: 2920538602615963836}
-  - component: {fileID: 264807426130609049}
+  - component: {fileID: 8868292951246191707}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
---- !u!114 &264807426130609049
+--- !u!114 &8868292951246191707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,7 +345,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29176d1e7851f5439314756ff5af687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 12
+  ammoSlots:
+  - ammoType: 0
+    ammoAmount: 30
+  - ammoType: 1
+    ammoAmount: 15
+  - ammoType: 2
+    ammoAmount: 10
 --- !u!1 &1364650573
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +554,7 @@ PrefabInstance:
     - target: {fileID: 1840626430135925392, guid: 17eb81f5e4bc6d64d90344e9239f19fc, type: 3}
       propertyPath: ammoSlot
       value: 
-      objectReference: {fileID: 264807426130609049}
+      objectReference: {fileID: 8868292951246191707}
     - target: {fileID: 1850532359229680994, guid: 17eb81f5e4bc6d64d90344e9239f19fc, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -650,7 +656,7 @@ PrefabInstance:
     - target: {fileID: 3421082392927676035, guid: 786f74e78fc744741b6af641ba079d59, type: 3}
       propertyPath: ammoSlot
       value: 
-      objectReference: {fileID: 264807426130609049}
+      objectReference: {fileID: 8868292951246191707}
     - target: {fileID: 6423153652963056310, guid: 786f74e78fc744741b6af641ba079d59, type: 3}
       propertyPath: m_Name
       value: Submachine
@@ -764,7 +770,7 @@ PrefabInstance:
     - target: {fileID: 3194876946264047242, guid: b6ddb5cedd75ac741966c5f8e57b696f, type: 3}
       propertyPath: ammoSlot
       value: 
-      objectReference: {fileID: 264807426130609049}
+      objectReference: {fileID: 8868292951246191707}
     - target: {fileID: 4115301380646426663, guid: b6ddb5cedd75ac741966c5f8e57b696f, type: 3}
       propertyPath: m_Name
       value: Pistol
@@ -874,7 +880,7 @@ PrefabInstance:
     - target: {fileID: 6826067632609721164, guid: ddc022cd6b3fa454da1f48186f3e4356, type: 3}
       propertyPath: ammoSlot
       value: 
-      objectReference: {fileID: 264807426130609049}
+      objectReference: {fileID: 8868292951246191707}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc022cd6b3fa454da1f48186f3e4356, type: 3}
 --- !u!4 &3601988026475829090 stripped
