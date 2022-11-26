@@ -26,7 +26,7 @@ public class EnemyAI : MonoBehaviour
         { 
             enabled = false;
             navMeshAgent.enabled = false;
-            GetComponent<CapsuleCollider>().isTrigger = true;
+            GetComponent<CapsuleCollider>().enabled = false;
         }
         else
         {
