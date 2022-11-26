@@ -185,8 +185,8 @@ GameObject:
   - component: {fileID: 5200661841651776362}
   - component: {fileID: 2920538602615963836}
   - component: {fileID: 8868292951246191707}
-  - component: {fileID: 5398175286015243829}
   - component: {fileID: 1005786391885305586}
+  - component: {fileID: 5398175286015243829}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -354,6 +354,18 @@ MonoBehaviour:
     ammoAmount: 15
   - ammoType: 2
     ammoAmount: 10
+--- !u!114 &1005786391885305586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f423fce165c003249b543f20ce751f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &5398175286015243829
 AudioSource:
   m_ObjectHideFlags: 0
@@ -450,18 +462,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1005786391885305586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f423fce165c003249b543f20ce751f1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1364650573
 GameObject:
   m_ObjectHideFlags: 0

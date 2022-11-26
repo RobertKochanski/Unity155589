@@ -26,8 +26,7 @@ public class EnemyAttack : MonoBehaviour
             return;
         }
 
-        audio.clip = attackSound;
-        audio.Play();
+        audio.PlayOneShot(attackSound);
 
         target.TakeDamage(damage);
     }

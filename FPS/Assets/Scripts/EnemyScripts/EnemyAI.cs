@@ -81,6 +81,11 @@ public class EnemyAI : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, turnSpeed * Time.deltaTime);
     }
 
+    public bool Provoked()
+    {
+        return isProvoked;
+    }
+
     void OnDrawGizmosSelected()
     {
         // Display the explosion radius when selected

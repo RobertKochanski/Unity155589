@@ -19,5 +19,6 @@ public class DeathHandler : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         FindObjectOfType<WeaponSwitch>().enabled = false;
+        AudioListener.pause = true;
     }
 }
