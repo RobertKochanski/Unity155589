@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    PlayerHealth target;
-    [SerializeField] private float damage = 10f;
+    private PlayerHealth target;
+
+    [SerializeField]
+    private AudioClip attackSound;
+    private AudioSource audio;
+
+    [SerializeField] 
+    private float damage = 10f;
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         target = FindObjectOfType<PlayerHealth>();
     }
 
@@ -18,6 +25,9 @@ public class EnemyAttack : MonoBehaviour
         {
             return;
         }
+
+        audio.clip = attackSound;
+        audio.Play();
 
         target.TakeDamage(damage);
     }
