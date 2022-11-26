@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveOnTouch : MonoBehaviour
+public class zad1 : MonoBehaviour
 {
     private Vector3 start;
     public Transform point;
