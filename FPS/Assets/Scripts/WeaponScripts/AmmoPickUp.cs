@@ -11,21 +11,19 @@ public class AmmoPickUp : MonoBehaviour
     private int amountPickUp = 10;
 
     [SerializeField]
-    private AudioClip audioClip;
+    private AudioSource audioSource;
 
-
-    private void Start()
-    {
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
             FindObjectOfType<Ammo>().IncreaseCurrentAmmo(ammoType, amountPickUp);
-            AudioSource.PlayClipAtPoint(audioClip, transform.position);
+
+            audioSource.PlayOneShot(audioSource.clip);
 
             Destroy(gameObject);
+            Destroy(transform.parent.gameObject, 3.0f);
         }
     }
 

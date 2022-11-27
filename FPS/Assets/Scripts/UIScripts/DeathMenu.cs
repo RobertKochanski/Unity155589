@@ -7,13 +7,14 @@ public class DeathMenu : MonoBehaviour
 {
     public void ReloadGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1.0f;
         AudioListener.pause = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitGame()
     {
+        FindObjectOfType<PauseGame>().PausedReset();
         SceneManager.LoadScene(0);
     }
 }

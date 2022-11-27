@@ -49,7 +49,7 @@ public class PauseGame : MonoBehaviour
         }
     }
 
-    public void ContinueGame()
+    public void PausedReset()
     {
         paused = false;
     }

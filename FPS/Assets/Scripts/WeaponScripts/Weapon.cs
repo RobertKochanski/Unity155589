@@ -18,7 +18,14 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float damage = 30f;
     [SerializeField] private float timeBetweenShots = 0.5f;
 
+    private AudioSource audioSource;
+
     private bool canShoot = true;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -39,7 +46,7 @@ public class Weapon : MonoBehaviour
 
         if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
-            AudioSource.PlayClipAtPoint(audioClip, transform.position);
+            audioSource.PlayOneShot(audioClip);
             ammoSlot.ReduceCurrentAmmo(ammoType);
             PlayMuzzleFlash();
             ProcessRaycast();
