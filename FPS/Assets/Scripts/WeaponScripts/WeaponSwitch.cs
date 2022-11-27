@@ -8,7 +8,6 @@ public class WeaponSwitch : MonoBehaviour
     [SerializeField]
     private int currentWeapon = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         SetWeaponActive();
@@ -32,7 +31,6 @@ public class WeaponSwitch : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.mouseScrollDelta.y < 0)

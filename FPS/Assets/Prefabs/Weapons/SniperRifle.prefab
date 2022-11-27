@@ -48,12 +48,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  range: 100
-  damage: 30
   muzzleFlash: {fileID: 8206455209355869779}
   hitEffect: {fileID: 4365823562459631609, guid: 63307a1c42fa74f49821442eb75998db, type: 3}
+  audioClip: {fileID: 8300000, guid: 1731ad57489eef5469a49bdb4e35a918, type: 3}
   ammoSlot: {fileID: 0}
   ammoType: 2
+  range: 100
+  damage: 30
   timeBetweenShots: 1
 --- !u!114 &4818927368950038412
 MonoBehaviour:

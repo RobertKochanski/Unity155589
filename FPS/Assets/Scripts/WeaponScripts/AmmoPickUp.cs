@@ -10,11 +10,20 @@ public class AmmoPickUp : MonoBehaviour
     [SerializeField]
     private int amountPickUp = 10;
 
+    [SerializeField]
+    private AudioClip audioClip;
+
+
+    private void Start()
+    {
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
             FindObjectOfType<Ammo>().IncreaseCurrentAmmo(ammoType, amountPickUp);
+            AudioSource.PlayClipAtPoint(audioClip, transform.position);
 
             Destroy(gameObject);
         }

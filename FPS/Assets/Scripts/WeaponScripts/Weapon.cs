@@ -7,12 +7,15 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private Camera camera;
-    [SerializeField] private float range = 100f;
-    [SerializeField] private float damage = 30f;
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private GameObject hitEffect;
+    [SerializeField] private AudioClip audioClip;
+
     [SerializeField] private Ammo ammoSlot;
     [SerializeField] private AmmoType ammoType;
+
+    [SerializeField] private float range = 100f;
+    [SerializeField] private float damage = 30f;
     [SerializeField] private float timeBetweenShots = 0.5f;
 
     private bool canShoot = true;
@@ -36,6 +39,7 @@ public class Weapon : MonoBehaviour
 
         if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
+            AudioSource.PlayClipAtPoint(audioClip, transform.position);
             ammoSlot.ReduceCurrentAmmo(ammoType);
             PlayMuzzleFlash();
             ProcessRaycast();

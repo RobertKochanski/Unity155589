@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoType: 0
   amountPickUp: 10
+  audioClip: {fileID: 8300000, guid: 0bd467f88fa0e3e4d8f97e829610c2c7, type: 3}
 --- !u!65 &673402193
 BoxCollider:
   m_ObjectHideFlags: 0
