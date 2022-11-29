@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private GameObject hitEffect;
     [SerializeField] private AudioClip audioClip;
+    [SerializeField] private TextMeshProUGUI ammoText;
 
     [SerializeField] private Ammo ammoSlot;
     [SerializeField] private AmmoType ammoType;
@@ -29,6 +31,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        DisplayAmmo();
         if (Input.GetMouseButton(0) && canShoot == true)
         {
             StartCoroutine(Shoot());
@@ -57,11 +60,6 @@ public class Weapon : MonoBehaviour
         canShoot = true;
     }
 
-    private void PlayMuzzleFlash()
-    {
-        muzzleFlash.Play();
-    }
-
     private void ProcessRaycast()
     {
         RaycastHit hit;
@@ -82,6 +80,11 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    private void PlayMuzzleFlash()
+    {
+        muzzleFlash.Play();
+    }
+
     private void CreateHitImpact(RaycastHit hit)
     {
         GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
@@ -91,8 +94,23 @@ public class Weapon : MonoBehaviour
 
     IEnumerator ShootDelay(float time)
     {
+        canShoot = false;
+
         yield return new WaitForSeconds(time);
 
         canShoot = true;
+    }
+
+    private void DisplayAmmo()
+    {
+        ammoText.text = $"Ammo: {ammoSlot.GetCurrentAmmo(ammoType)}";
+        if (ammoSlot.GetCurrentAmmo(ammoType) == 0)
+        {
+            ammoText.color = Color.red;
+        }
+        else
+        {
+            ammoText.color = Color.green;
+        }
     }
 }

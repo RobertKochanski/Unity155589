@@ -5,10 +5,10 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private Transform target;
     [SerializeField] private float chaseRange = 5f;
     [SerializeField] private float turnSpeed = 5f;
 
+    private Transform target;
     private NavMeshAgent navMeshAgent;
     private EnemyHealth health;
     private float distanceToTarget = Mathf.Infinity;
@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        target = FindObjectOfType<PlayerHealth>().transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
         health = GetComponent<EnemyHealth>();
     }
@@ -49,8 +50,6 @@ public class EnemyAI : MonoBehaviour
 
     private void EngageTarget()
     {
-        FaceTarget();
-
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
@@ -58,6 +57,7 @@ public class EnemyAI : MonoBehaviour
 
         if (distanceToTarget <= navMeshAgent.stoppingDistance)
         {
+            FaceTarget();
             AttackTarget();
         }
     }

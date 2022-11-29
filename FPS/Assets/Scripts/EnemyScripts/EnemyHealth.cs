@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] private float hitPoints = 100f;
+    [SerializeField] private float enemyHealth = 100f;
     private bool isDead = false;
 
     [SerializeField] private AudioClip deadAudio;
@@ -19,14 +19,14 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         GetComponent<EnemyAI>().OnDamageTaken();
-        hitPoints -= damage;
+        enemyHealth -= damage;
 
         if (!isDead)
         {
             audio.PlayOneShot(damagedAudio);
         }
 
-        if (hitPoints <= 0 && !isDead)
+        if (enemyHealth <= 0 && !isDead)
         {
             audio.PlayOneShot(deadAudio);
             isDead = true;
