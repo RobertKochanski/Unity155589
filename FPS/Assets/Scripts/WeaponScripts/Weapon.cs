@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private AudioClip audioClip;
     [SerializeField] private TextMeshProUGUI ammoText;
 
-    [SerializeField] private Ammo ammoSlot;
+    [SerializeField] private Ammo ammo;
     [SerializeField] private AmmoType ammoType;
 
     [SerializeField] private float range = 100f;
@@ -47,10 +47,10 @@ public class Weapon : MonoBehaviour
     {
         canShoot = false;
 
-        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
+        if (ammo.GetCurrentAmmo(ammoType) > 0)
         {
             audioSource.PlayOneShot(audioClip);
-            ammoSlot.ReduceCurrentAmmo(ammoType);
+            ammo.ReduceCurrentAmmo(ammoType);
             PlayMuzzleFlash();
             ProcessRaycast();
         }
@@ -103,8 +103,8 @@ public class Weapon : MonoBehaviour
 
     private void DisplayAmmo()
     {
-        ammoText.text = $"Ammo: {ammoSlot.GetCurrentAmmo(ammoType)}";
-        if (ammoSlot.GetCurrentAmmo(ammoType) == 0)
+        ammoText.text = $"Ammo: {ammo.GetCurrentAmmo(ammoType)}";
+        if (ammo.GetCurrentAmmo(ammoType) == 0)
         {
             ammoText.color = Color.red;
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum AmmoType
 {
-    bullets, // glock and submachine
+    bullets, // pistol and submachine gun
     shells, // shotgun
     sniperBullets // sniperRifle
 }
