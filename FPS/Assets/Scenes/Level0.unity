@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 76939185}
   - component: {fileID: 76939184}
   - component: {fileID: 76939183}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,7 +970,7 @@ GameObject:
   - component: {fileID: 116382137}
   - component: {fileID: 116382139}
   - component: {fileID: 116382138}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HealthDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1436,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-61964
+  m_Name: pb_Mesh-41440
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2532,7 +2532,7 @@ GameObject:
   - component: {fileID: 403563513}
   - component: {fileID: 403563512}
   - component: {fileID: 403563511}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AmmoDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2763,6 +2763,10 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 403563511}
+    - target: {fileID: 8635143083588530929, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 664460278}
     - target: {fileID: 8868292951246191707, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: ammoSlots.Array.data[0].ammoAmount
       value: 0
@@ -2888,7 +2892,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-14106
+  m_Name: pb_Mesh-41504
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3052,7 +3056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-61936
+  m_Name: pb_Mesh-41412
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8860,7 +8864,7 @@ GameObject:
   - component: {fileID: 526045163}
   - component: {fileID: 526045165}
   - component: {fileID: 526045164}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quit Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8995,7 +8999,7 @@ GameObject:
   - component: {fileID: 535830496}
   - component: {fileID: 535830498}
   - component: {fileID: 535830497}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quit Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9553,13 +9557,89 @@ Transform:
   m_Father: {fileID: 2077196847}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &664460276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 664460277}
+  - component: {fileID: 664460279}
+  - component: {fileID: 664460278}
+  m_Layer: 5
+  m_Name: DamageImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &664460277
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664460276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 11, y: 5, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 787791206}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &664460278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664460276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 86797cb8ab28e584f8408d82d0daea16, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &664460279
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664460276}
+  m_CullTransparentMesh: 1
 --- !u!43 &669929114
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-61950
+  m_Name: pb_Mesh-41426
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10106,7 +10186,7 @@ GameObject:
   - component: {fileID: 787791209}
   - component: {fileID: 787791208}
   - component: {fileID: 787791207}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Overlay Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10128,6 +10208,7 @@ RectTransform:
   - {fileID: 403563513}
   - {fileID: 1129061765}
   - {fileID: 116382137}
+  - {fileID: 664460277}
   m_Father: {fileID: 1466015207}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10380,7 +10461,7 @@ GameObject:
   - component: {fileID: 862434243}
   - component: {fileID: 862434245}
   - component: {fileID: 862434244}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Play Again Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10516,7 +10597,7 @@ GameObject:
   - component: {fileID: 875815711}
   - component: {fileID: 875815710}
   - component: {fileID: 875815709}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10914,7 +10995,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-14092
+  m_Name: pb_Mesh-41490
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11308,7 +11389,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-63316
+  m_Name: pb_Mesh-42792
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12120,7 +12201,7 @@ GameObject:
   - component: {fileID: 1129061765}
   - component: {fileID: 1129061767}
   - component: {fileID: 1129061766}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12197,7 +12278,7 @@ GameObject:
   - component: {fileID: 1141894990}
   - component: {fileID: 1141894989}
   - component: {fileID: 1141894988}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12916,7 +12997,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-61978
+  m_Name: pb_Mesh-41454
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13157,7 +13238,7 @@ GameObject:
   - component: {fileID: 1295736390}
   - component: {fileID: 1295736389}
   - component: {fileID: 1295736388}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Game Over Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13259,7 +13340,7 @@ GameObject:
   - component: {fileID: 1299793227}
   - component: {fileID: 1299793229}
   - component: {fileID: 1299793228}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Pause Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13423,7 +13504,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-63302
+  m_Name: pb_Mesh-42778
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13587,7 +13668,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh120748
+  m_Name: pb_Mesh49676
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14004,7 +14085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1466015207}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14131,7 +14212,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-63344
+  m_Name: pb_Mesh-42820
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15308,7 +15389,7 @@ GameObject:
   - component: {fileID: 1715163814}
   - component: {fileID: 1715163816}
   - component: {fileID: 1715163815}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: You Dead Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15438,7 +15519,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-63330
+  m_Name: pb_Mesh-42806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15663,7 +15744,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-14076
+  m_Name: pb_Mesh-41474
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15831,7 +15912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1806429822}
   - component: {fileID: 1806429823}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Game Session
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16045,7 +16126,7 @@ GameObject:
   - component: {fileID: 1885546929}
   - component: {fileID: 1885546931}
   - component: {fileID: 1885546930}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Continue Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16374,7 +16455,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24414
+  m_Name: pb_Mesh49714
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16715,7 +16796,7 @@ GameObject:
   - component: {fileID: 1955594828}
   - component: {fileID: 1955594830}
   - component: {fileID: 1955594829}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16965,7 +17046,7 @@ GameObject:
   - component: {fileID: 1991742997}
   - component: {fileID: 1991742996}
   - component: {fileID: 1991742994}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Pause Game Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17081,7 +17162,7 @@ GameObject:
   - component: {fileID: 2041230508}
   - component: {fileID: 2041230507}
   - component: {fileID: 2041230506}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Play Again Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}

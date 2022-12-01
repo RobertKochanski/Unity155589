@@ -14,6 +14,12 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         audio = GetComponent<AudioSource>();
+
+        if (enemyHealth <= 0)
+        {
+            isDead = true;
+            GetComponent<Animator>().SetTrigger("die");
+        }
     }
 
     public void TakeDamage(float damage)

@@ -40,7 +40,7 @@ public class Weapon : MonoBehaviour
 
     public void OnEnable()
     {
-        StartCoroutine(ShootDelay(1));
+        StartCoroutine(ShootDelay(0.5f));
     }
 
     IEnumerator Shoot()

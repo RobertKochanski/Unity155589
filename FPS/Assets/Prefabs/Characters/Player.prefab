@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 2920538602615963836}
   - component: {fileID: 8868292951246191707}
   - component: {fileID: 1005786391885305586}
+  - component: {fileID: 8635143083588530929}
   - component: {fileID: 5398175286015243829}
   m_Layer: 0
   m_Name: Player
@@ -299,7 +300,7 @@ MonoBehaviour:
     XSensitivity: 2
     YSensitivity: 2
     clampVerticalRotation: 1
-    MinimumX: -45
+    MinimumX: -60
     MaximumX: 90
     smooth: 1
     smoothTime: 18
@@ -322,7 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804868b941fcc5545bd9fdd02af7eb10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  healthPoints: 100
+  healthDisplay: {fileID: 0}
 --- !u!114 &2920538602615963836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +369,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f423fce165c003249b543f20ce751f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8635143083588530929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a3663ed7eaa9f43abb0e959454e2e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageImage: {fileID: 0}
 --- !u!82 &5398175286015243829
 AudioSource:
   m_ObjectHideFlags: 0

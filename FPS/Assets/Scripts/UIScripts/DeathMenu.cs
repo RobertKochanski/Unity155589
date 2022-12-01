@@ -15,6 +15,7 @@ public class DeathMenu : MonoBehaviour
     public void QuitGame()
     {
         FindObjectOfType<PauseGame>().PausedReset();
+        PlayerPrefs.SetInt("continue", SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(0);
     }
 }

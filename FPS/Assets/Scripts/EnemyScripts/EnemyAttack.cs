@@ -27,7 +27,7 @@ public class EnemyAttack : MonoBehaviour
         }
 
         audio.PlayOneShot(attackSound);
-
+        target.GetComponent<DamageDisplay>().ShowDamageImage();
         target.TakeDamage(damage);
     }
 }
